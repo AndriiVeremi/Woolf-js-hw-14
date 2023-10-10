@@ -1,8 +1,25 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
+
+const list = document.querySelector("#ingredients");
+
+function createLi(arrIngredients) {
+  const markup = arrIngredients.map((ingredient) => {
+    const li = document.createElement("li");
+    li.classList.add("item");
+    li.textContent = ingredient;
+    return li;
+  });
+
+  list.append(...markup);
+}
+
+createLi(ingredients);
+
+// Variant 2 ------------
