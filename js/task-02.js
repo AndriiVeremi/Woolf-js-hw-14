@@ -22,4 +22,3 @@ function createLi(arrIngredients) {
 
 createLi(ingredients);
 
-// Variant 2 ------------
