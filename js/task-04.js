@@ -4,20 +4,17 @@ const refs = {
   counter: document.querySelector("#value"),
 };
 
-let counterValue = 5;
+let counterValue = 0;
 
 refs.increment.addEventListener("click", addCounter);
 refs.decrement.addEventListener("click", deleteCounter);
 
 function addCounter() {
-  console.log(counterValue);
-  counterValue += 1;
+  refs.counter.textContent = counterValue += 1;
 }
 
 function deleteCounter() {
-  console.log(counterValue);
-  return counterValue -= 1;
+  refs.counter.textContent = counterValue -= 1;
 }
 
 refs.counter.innerHTML = counterValue;
-
